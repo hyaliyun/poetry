@@ -127,10 +127,10 @@ export default async function createConfigAsync() {
         type: 'text/css',
       },
     ],
-  i18n: {
-    defaultLocale: 'zh',
-    locales: ['zh'],
-  },
+    i18n: {
+      defaultLocale: 'en',
+      locales: ['en'],
+    },
     markdown: {
       format: 'detect',
       mermaid: true,
@@ -195,7 +195,7 @@ export default async function createConfigAsync() {
           path: 'community',
           routeBasePath: 'community',
           editUrl: ({ pagesPath }) => 
-            `https://github.com/hyaliyun/poetry/edit/main/website/src/pages/${pagesPath}`,
+            `https://github.com/hyaliyun/blob/main/website/`,
           remarkPlugins: [npm2yarn],
           editCurrentVersion: true,
           sidebarPath: './sidebarsCommunity.js',
@@ -210,7 +210,7 @@ export default async function createConfigAsync() {
           path: 'google',
           routeBasePath: 'google',
           editUrl: ({ pagesPath }) => 
-            `https://github.com/hyaliyun/poetry/edit/main/website/src/pages/${pagesPath}`,
+            `https://github.com/hyaliyun/blob/main/website/`,
           remarkPlugins: [npm2yarn],
           editCurrentVersion: true,
           sidebarPath: './sidebars.ts',
@@ -343,7 +343,7 @@ export default async function createConfigAsync() {
           pages: {
             remarkPlugins: [npm2yarn],
             editUrl: ({ pagesPath }) => 
-              `https://github.com/hyaliyun/poetry/edit/main/website/src/pages/${pagesPath}`,
+              `https://github.com/hyaliyun/blob/main/website/`,
             showLastUpdateAuthor: true,
             showLastUpdateTime: true,
           } satisfies PageOptions,
