@@ -127,10 +127,6 @@ export default async function createConfigAsync() {
         type: 'text/css',
       },
     ],
-    i18n: {
-      defaultLocale: 'en',
-      locales: ['en'],
-    },
     markdown: {
       format: 'detect',
       mermaid: true,
