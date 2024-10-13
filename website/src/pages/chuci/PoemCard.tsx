@@ -2,13 +2,17 @@ import React from 'react';
 import styles from './styles.module.css';
 
 interface Poem {
-  title: string;
+  title?: string; 
   section: string;
   author: string;
   content: string[];
 }
 
 const PoemCard: React.FC<{ poem: Poem }> = ({ poem }) => {
+  if (!poem.title) {
+    console.error("PoemCard received undefined title:", poem);
+    return null;  // Skip rendering if title is missing
+  }
   return (
     <div className={styles.card}>
       <div className={styles.titleSectionAuthor}>

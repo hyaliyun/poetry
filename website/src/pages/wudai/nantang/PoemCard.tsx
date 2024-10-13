@@ -4,12 +4,16 @@ import styles from './PoemCard.module.css';
 interface Poem {
   rhythmic: string;
   author: string;
-  title: string;
+  title?: string; 
   notes: string[];
   paragraphs: string[];
 }
 
 const PoemCard: React.FC<{ poem: Poem }> = ({ poem }) => {
+  if (!poem.title) {
+    console.error("PoemCard received undefined title:", poem);
+    return null;  // Skip rendering if title is missing
+  }
   const sealCharacter = poem.title.charAt(0); // Extract seal character based on author name
 
   return (

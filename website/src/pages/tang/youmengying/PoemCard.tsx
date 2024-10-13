@@ -8,6 +8,10 @@ interface Poem {
 }
 
 const PoemCard: React.FC<{ poem: Poem }> = ({ poem }) => {
+  if (!poem.title) {
+    console.error("PoemCard received undefined title:", poem);
+    return null;  // Skip rendering if title is missing
+  }
   const sealCharacter = poem.content.charAt(2); // Extract seal character based on author name
   const seal = poem.content.charAt(3);
   const author = poem.content.charAt(4);

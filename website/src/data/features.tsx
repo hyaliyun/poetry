@@ -9,7 +9,7 @@ import React from 'react';
 import Translate, {translate} from '@docusaurus/Translate';
 
 export type FeatureItem = {
-  title: string;
+  title: string; 
   image: {
     src: string;
     width: number;

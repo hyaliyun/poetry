@@ -394,7 +394,7 @@ const Users: User[] = [
 ];
 
 export type User = {
-  title: string;
+  title: string; 
   description: string;
   preview: string | null; // null = use our serverless screenshot service
   website: string;

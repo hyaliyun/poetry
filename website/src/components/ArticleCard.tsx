@@ -1,7 +1,7 @@
 import React from 'react';
 
 type Props = {
-  title: string;
+  title: string; 
   link: string;
   date: Date;
   author: {

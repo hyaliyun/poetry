@@ -2,7 +2,7 @@ import React from 'react';
 
 interface Props {
   videoId: string;
-  title: string;
+  title: string; 
 }
 
 export const YouTubeEmbed = ({ videoId, title }: Props) => {

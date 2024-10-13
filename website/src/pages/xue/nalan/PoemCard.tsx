@@ -2,12 +2,16 @@ import React from 'react';
 import styles from './PoemCard.module.css';
 
 interface Poem {
-  title: string;
+  title?: string; 
   author: string;
   para: string[];
 }
 
 const PoemCard: React.FC<{ poem: Poem }> = ({ poem }) => {
+  if (!poem.title) {
+    console.error("PoemCard received undefined title:", poem);
+    return null;  // Skip rendering if title is missing
+  }
   const sealCharacter = poem.author.charAt(1); // Extract seal character based on author name
 
   return (

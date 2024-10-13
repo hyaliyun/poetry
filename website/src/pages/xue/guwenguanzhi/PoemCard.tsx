@@ -9,6 +9,10 @@ interface Poem {
 }
 
 const PoemCard: React.FC<{ poem: Poem }> = ({ poem }) => {
+  if (!poem.title) {
+    console.error("PoemCard received undefined title:", poem);
+    return null;  // Skip rendering if title is missing
+  }
   return (
     <div className={styles.card}>
       <div className={styles.titleSectionAuthor}>

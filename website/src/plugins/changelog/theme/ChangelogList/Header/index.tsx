@@ -60,7 +60,7 @@ function RssLink() {
 export default function ChangelogListHeader({
   blogTitle,
 }: {
-  blogTitle: string;
+  blogtitle: string; 
 }): JSX.Element {
   return (
     <header className="margin-bottom--lg">

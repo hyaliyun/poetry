@@ -66,7 +66,7 @@ for (const sponsor of sponsors) {
 const bucketConfig: Record<
   keyof Buckets,
   {
-    title: string;
+    title: string; 
     numCols: number;
     imgSize: number;
   }
