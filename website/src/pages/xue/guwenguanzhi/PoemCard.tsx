@@ -18,7 +18,7 @@ const PoemCard: React.FC<{ poem: Poem }> = ({ poem }) => {
         <h2 className={styles.author}>{poem.author}</h2>
       </div>
       <div className={styles.paragraphs}>
-        {poem.paragraphs.map((para, index) => (
+        {paragraphs.map((para, index) => (
           <p key={index} className={styles.paragraph}>{para}</p>
         ))}
       </div>

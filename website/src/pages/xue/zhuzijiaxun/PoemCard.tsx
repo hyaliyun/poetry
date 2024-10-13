@@ -12,7 +12,7 @@ const PoemCard: React.FC<{ poem: Poem }> = ({ poem }) => {
     <div className={styles.card}>
       <h2 className={styles.title}>{title}</h2>
       <div className={styles.paragraphs}>
-        {poem.paragraphs.map((para, index) => (
+        {paragraphs.map((para, index) => (
           <p key={index} className={styles.paragraph}>{para}</p>
         ))}
       </div>
